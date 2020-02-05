@@ -39,6 +39,29 @@ function Example() {
 }
 ```
 
+### Default value
+
+```jsx
+import { useRadioState, Radio, RadioGroup } from "reakit/Radio";
+
+function Example() {
+  const radio = useRadioState({ state: "orange" });
+  return (
+    <RadioGroup {...radio} aria-label="fruits">
+      <label>
+        <Radio {...radio} value="apple" /> apple
+      </label>
+      <label>
+        <Radio {...radio} value="orange" /> orange
+      </label>
+      <label>
+        <Radio {...radio} value="watermelon" /> watermelon
+      </label>
+    </RadioGroup>
+  );
+}
+```
+
 ## Accessibility
 
 - `Radio` has role `radio`.
